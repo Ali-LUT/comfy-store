@@ -1,4 +1,12 @@
+import FeaturedProducts from "@/components/FeaturedProducts";
+import Hero from "@/components/Hero";
+
 function Landing() {
-  return <h1 className="text-4xl">Landing Page</h1>;
+  return (
+    <>
+      <Hero />
+      <FeaturedProducts />
+    </>
+  );
 }
 export default Landing;
