@@ -1,7 +1,10 @@
-import React from "react";
-
+import ProductsList from "./ProductsList";
 function ProductsContainer() {
-  return <div></div>;
+  return (
+    <div>
+      <ProductsList />
+    </div>
+  );
 }
 
 export default ProductsContainer;
