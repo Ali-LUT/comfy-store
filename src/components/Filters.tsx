@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { type ProductsResponseWithParams } from "@/utils";
 import FormInput from "./FormInput";
 import FormSelect from "./FormSelect";
+import FormRange from "./FormRange";
 
 function Filters() {
   const { meta, params } = useLoaderData() as ProductsResponseWithParams;
@@ -14,7 +15,7 @@ function Filters() {
         type="search"
         label="search product"
         name="search"
-        defaultValue="{search}"
+        defaultValue="search"
       />
       {/* CATEGORIES */}
       <FormSelect
@@ -23,21 +24,21 @@ function Filters() {
         options={meta.categories}
         defaultValue={category}
       />
-      ;{/* COMPANIES */}
+      {/* COMPANIES */}
       <FormSelect
         label="select company"
         name="company"
         options={meta.companies}
         defaultValue={company}
       />
-      ;{/* ORDER */}
+      {/* ORDER */}
       <FormSelect
         label="order by"
         name="order"
         options={["a-z", "z-a", "high", "low"]}
         defaultValue={order}
       />
-      ;
+      <FormRange label="price" name="price" defaultValue={price} />
       <Button type="submit" size="sm" className="self-end mb-2">
         search
       </Button>
