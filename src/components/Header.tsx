@@ -1,17 +1,22 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "./ui/button";
-import { useState } from "react";
-const Header = () => {
-  const navigate = useNavigate();
+import { useAppDispatch, useAppSelector } from "@/hooks";
 
-  // temp
-  const [user, setUser] = useState<{ username: string } | null>({
-    username: "demo user",
-  });
+import { logoutUser } from "../features/user/userSlice";
+import { clearCart } from "../features/cart/cartSlice";
+import { useToast } from "./ui/use-toast";
+
+const Header = () => {
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const user = useAppSelector((state) => state.userState.user);
 
   const handleLogout = () => {
+    dispatch(clearCart());
+    dispatch(logoutUser());
+    toast({ description: "Logged out" });
     navigate("/");
-    setUser(null);
   };
 
   return (
