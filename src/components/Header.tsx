@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from "@/hooks";
 
 import { logoutUser } from "../features/user/userSlice";
 import { clearCart } from "../features/cart/cartSlice";
-import { useToast } from "./ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 
 const Header = () => {
   const dispatch = useAppDispatch();

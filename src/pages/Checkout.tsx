@@ -1,7 +1,7 @@
 import { useAppSelector } from "@/hooks";
 import { CheckoutForm, SectionTitle, CartTotals } from "@/components";
 import { LoaderFunction, redirect } from "react-router-dom";
-import { toast } from "@/components/ui/use-toast";
+import { toast } from "@/hooks/use-toast";
 import { type ReduxStore } from "@/store";
 
 export const loader =

@@ -1,5 +1,5 @@
 import { LoaderFunction, redirect, useLoaderData } from "react-router-dom";
-import { toast } from "@/components/ui/use-toast";
+
 import { customFetch } from "@/utils";
 import {
   OrdersList,
@@ -8,6 +8,7 @@ import {
 } from "@/components";
 import { ReduxStore } from "@/store";
 import { type OrdersResponse } from "@/utils";
+import { toast } from "@/hooks/use-toast";
 export const loader =
   (store: ReduxStore): LoaderFunction =>
   async ({ request }): Promise<OrdersResponse | Response | null> => {
