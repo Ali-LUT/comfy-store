@@ -89,7 +89,7 @@ const SingleProduct = () => {
             amount={amount}
             setAmount={setAmount}
           />
-          ;{/* CART BUTTON */}
+          {/* CART BUTTON */}
           <Button size="lg" className="mt-10" onClick={addToCart}>
             Add to bag
           </Button>
