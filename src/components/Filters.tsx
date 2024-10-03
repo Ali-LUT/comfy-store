@@ -16,7 +16,7 @@ function Filters() {
         type="search"
         label="search product"
         name="search"
-        defaultValue="search"
+        defaultValue={search}
       />
       {/* CATEGORIES */}
       <FormSelect
